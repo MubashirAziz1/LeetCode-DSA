@@ -12,10 +12,7 @@ class Solution:
         res = []
         i = 0
         while i < len(s):
-            j = i
-            while s[j] != '#':
-                j += 1
-            length = int(s[i:j])
-            res.append(s[j+1 : j+1+length])
-            i = j+1+length
+            length = int(s[i])
+            res.append(s[i+2 : i+2+length])
+            i = i+2+length
         return res
